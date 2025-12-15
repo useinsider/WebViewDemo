@@ -10,13 +10,17 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.useinsider.webviewdemo"
+        // FIXME-INSIDER: Please change with your application ID.
+        applicationId = "com.useinsider.ecommerce"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // FIXME-INSIDER: Please change with your partner name.
+        manifestPlaceholders["partner"] = "your_partner_name"
     }
 
     buildTypes {
