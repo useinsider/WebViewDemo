@@ -1,7 +1,6 @@
 import './style.css';
 
-// User Attributes
-async function handleSetAttributes() {
+window.handleSetAttributes = async function () {
     const currentUser = window.insider.getCurrentUser();
 
     await currentUser.setName("Insider")
@@ -25,8 +24,8 @@ async function handleSetAttributes() {
     console.log("[INSIDER][getCurrentUser]: Method is triggered.");
 }
 
-// User Identifiers
-async function handleLogin() {
+
+window.handleLogin = async function () {
     const identifiers = window.insider.createIdentifiers()
     identifiers.addEmail("mobile.test@useinsider.com");
     identifiers.addPhoneNumber("+909876543210");
@@ -38,15 +37,15 @@ async function handleLogin() {
     console.log("[INSIDER][login]: ", insiderId, identifiers);
 }
 
-async function handleLogout() {
+window.handleLogout = async function () {
     const currentUser = window.insider.getCurrentUser();
     await currentUser.logout()
 
     console.log("[INSIDER][logout]: Method is triggered.");
 }
 
-// Event
-async function handleTriggerEvents() {
+
+window.handleTriggerEvents = async function () {
     // You can create an event without parameters and call the build method
     await window.insider.tagEvent("first_event").build()
 
@@ -76,8 +75,8 @@ async function handleTriggerEvents() {
     console.log("[INSIDER][events] Insider events triggered.");
 }
 
-// Product
-async function handleCreateProduct() {
+
+window.handleCreateProduct = async function () {
     const insiderExampleProduct = window.insider.createNewProduct(
         "productId",
         "productName",
@@ -119,16 +118,16 @@ async function handleCreateProduct() {
     return insiderExampleProduct;
 }
 
-// Purchase
-async function handleAddItemToCart() {
-    const insiderExampleProduct = await handleCreateProduct()
+
+window.handleAddItemToCart = async function () {
+    const insiderExampleProduct = await window.handleCreateProduct()
     await window.insider.itemAddedToCart(insiderExampleProduct);
 
     console.log("[INSIDER][itemAddedToCart]: Method is triggered.");
     console.log("[INSIDER][itemAddedToCart]: ", "product: ", insiderExampleProduct);
 }
 
-async function handleRemoveItemFromCart() {
+window.handleRemoveItemFromCart = async function () {
     const productId = "productId";
     await window.insider.itemRemovedFromCart(productId);
 
@@ -136,15 +135,15 @@ async function handleRemoveItemFromCart() {
     console.log("[INSIDER][itemRemovedFromCart]: ", "productId: ", productId);
 }
 
-async function handleClearCart() {
+window.handleClearCart = async function () {
     await window.insider.cartCleared();
 
     console.log("[INSIDER][cartCleared]: Method is triggered.");
 }
 
-async function handlePurchaseItem() {
+window.handlePurchaseItem = async function () {
     const uniqueSaleId = 'uniqueSaleId';
-    const insiderExampleProduct = await handleCreateProduct()
+    const insiderExampleProduct = await window.handleCreateProduct()
 
     await window.insider.itemPurchased(uniqueSaleId, insiderExampleProduct);
 
@@ -152,77 +151,77 @@ async function handlePurchaseItem() {
     console.log("[INSIDER][itemPurchased]: ", "uniqueSaleID: " + uniqueSaleId);
 }
 
-// Smart Recommender
-async function handleGetSmartRecommenderData() {
+
+window.handleGetSmartRecommenderData = async function () {
     // TODO: Not Supported for WebView SDK.
     console.log("[INSIDER]: This method is not supported for WebView SDK.");
 }
 
-// Social Proof
-async function handleTriggerSocialProof() {
+
+window.handleTriggerSocialProof = async function () {
     // TODO: Not Supported for WebView SDK.
     console.log("[INSIDER]: This method is not supported for WebView SDK.");
 }
 
-// Page Visit Methods
-async function handleHomePageVisit() {
+
+window.handleHomePageVisit = async function () {
     await window.insider.visitHomePage()
 
     console.log("[INSIDER][visitHomePage]: Method is triggered.");
 }
 
-async function handleProductPageVisit() {
-    const insiderExampleProduct = await handleCreateProduct()
+window.handleProductPageVisit = async function () {
+    const insiderExampleProduct = await window.handleCreateProduct()
     await window.insider.visitProductDetailsPage(insiderExampleProduct)
 
     console.log("[INSIDER][visitProductDetailsPage]: Method is triggered.");
 }
 
-async function handleCartPageVisit() {
+window.handleCartPageVisit = async function () {
     const insiderExampleProducts = [
-        await handleCreateProduct(),
-        await handleCreateProduct(),
+        await window.handleCreateProduct(),
+        await window.handleCreateProduct(),
     ];
     await window.insider.visitCartPage(insiderExampleProducts)
 
     console.log("[INSIDER][visitCartPage]: Method is triggered.");
 }
 
-async function handleCategoryPageVisit() {
+window.handleCategoryPageVisit = async function () {
     const taxonomy = ["taxonomy1", "taxonomy2", "taxonomy3"];
     await window.insider.visitListingPage(taxonomy);
 
     console.log("[INSIDER][visitListingPage]: Method is triggered.");
 }
 
-// GDPR
-async function handleGDPRTrue() {
+
+window.handleGDPRTrue = async function () {
     await window.insider.setGDPRConsent(true);
 
     console.log(`[INSIDER][setGDPRConsent]: Method is triggered - true`);
 }
 
-async function handleGDPRFalse() {
+window.handleGDPRFalse = async function () {
     await window.insider.setGDPRConsent(false);
 
     console.log(`[INSIDER][setGDPRConsent]: Method is triggered - false`);
 }
 
-// Mobile Access
-async function handleMobileAccessTrue() {
+
+window.handleMobileAccessTrue = async function () {
     await window.insider.setMobileAppAccess(true);
 
     console.log(`[INSIDER][setMobileAppAccess]: Method is triggered - true`);
 }
 
-async function handleMobileAccessFalse() {
+window.handleMobileAccessFalse = async function () {
     await window.insider.setMobileAppAccess(false);
 
     console.log(`[INSIDER][setMobileAppAccess]: Method is triggered - false`);
 }
 
-// Message Center
-async function handleGetMessageCenterData() {
+
+window.handleGetMessageCenterData = async function () {
     // You can see push campaigns in the last 90 days
     const startDate = new Date(Date.now() - 86400000);
     const endDate = new Date(Date.now() + 86400000);
@@ -237,20 +236,20 @@ async function handleGetMessageCenterData() {
     }
 }
 
-// Content Optimizer
-async function handleGetContentOptimizerVariable() {
+
+window.handleGetContentOptimizerVariable = async function () {
     // TODO: Not Supported for WebView SDK.
     console.log("[INSIDER]: This method is not supported for WebView SDK.");
 }
 
-// Block In App
-async function handleDisableInAppMessages() {
+
+window.handleDisableInAppMessages = async function () {
     await window.insider.disableInAppMessages()
 
     console.log(`[INSIDER][disableInAppMessages]: Method is triggered.`);
 }
 
-async function handleEnableInAppMessages() {
+window.handleEnableInAppMessages = async function () {
     await window.insider.enableInAppMessages()
 
     console.log(`[INSIDER][enableInAppMessages]: Method is triggered.`);
