@@ -6,30 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B6290FDC2EF00902001E7897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6290FD22EF00902001E7897 /* AppDelegate.swift */; };
+		B6290FDD2EF00902001E7897 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6290FD92EF00902001E7897 /* SceneDelegate.swift */; };
+		B6290FDE2EF00902001E7897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6290FDA2EF00902001E7897 /* ViewController.swift */; };
+		B6290FDF2EF00902001E7897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6290FD32EF00902001E7897 /* Assets.xcassets */; };
+		B6290FE12EF00902001E7897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6290FD62EF00902001E7897 /* LaunchScreen.storyboard */; };
+		B6290FE22EF00902001E7897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6290FD82EF00902001E7897 /* Main.storyboard */; };
+		B6290FE42EF0090A001E7897 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B6290FE32EF0090A001E7897 /* index.html */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B6290FAA2EEFFFAF001E7897 /* WebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6290FD22EF00902001E7897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6290FD32EF00902001E7897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6290FD42EF00902001E7897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6290FD52EF00902001E7897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6290FD72EF00902001E7897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B6290FD92EF00902001E7897 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B6290FDA2EF00902001E7897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B6290FE32EF0090A001E7897 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = ../dist/index.html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B6290FBC2EEFFFB0001E7897 /* Exceptions for "WebViewDemo" folder in "WebViewDemo" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = B6290FA92EEFFFAF001E7897 /* WebViewDemo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B6290FAC2EEFFFAF001E7897 /* WebViewDemo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B6290FBC2EEFFFB0001E7897 /* Exceptions for "WebViewDemo" folder in "WebViewDemo" target */,
-			);
-			path = WebViewDemo;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B6290FA72EEFFFAF001E7897 /* Frameworks */ = {
@@ -45,7 +42,7 @@
 		B6290FA12EEFFFAF001E7897 = {
 			isa = PBXGroup;
 			children = (
-				B6290FAC2EEFFFAF001E7897 /* WebViewDemo */,
+				B6290FDB2EF00902001E7897 /* WebViewDemo */,
 				B6290FAB2EEFFFAF001E7897 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +53,21 @@
 				B6290FAA2EEFFFAF001E7897 /* WebViewDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B6290FDB2EF00902001E7897 /* WebViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B6290FE32EF0090A001E7897 /* index.html */,
+				B6290FD22EF00902001E7897 /* AppDelegate.swift */,
+				B6290FD32EF00902001E7897 /* Assets.xcassets */,
+				B6290FD42EF00902001E7897 /* Info.plist */,
+				B6290FD62EF00902001E7897 /* LaunchScreen.storyboard */,
+				B6290FD82EF00902001E7897 /* Main.storyboard */,
+				B6290FD92EF00902001E7897 /* SceneDelegate.swift */,
+				B6290FDA2EF00902001E7897 /* ViewController.swift */,
+			);
+			path = WebViewDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +84,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B6290FAC2EEFFFAF001E7897 /* WebViewDemo */,
 			);
 			name = WebViewDemo;
 			packageProductDependencies = (
@@ -122,6 +131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6290FDF2EF00902001E7897 /* Assets.xcassets in Resources */,
+				B6290FE42EF0090A001E7897 /* index.html in Resources */,
+				B6290FE12EF00902001E7897 /* LaunchScreen.storyboard in Resources */,
+				B6290FE22EF00902001E7897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +145,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6290FDC2EF00902001E7897 /* AppDelegate.swift in Sources */,
+				B6290FDD2EF00902001E7897 /* SceneDelegate.swift in Sources */,
+				B6290FDE2EF00902001E7897 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B6290FD62EF00902001E7897 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6290FD52EF00902001E7897 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B6290FD82EF00902001E7897 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6290FD72EF00902001E7897 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B6290FBE2EEFFFB0001E7897 /* Debug */ = {
@@ -148,11 +183,13 @@
 				DEVELOPMENT_TEAM = 276CUFK954;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WebView Demo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -180,11 +217,13 @@
 				DEVELOPMENT_TEAM = 276CUFK954;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WebView Demo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
