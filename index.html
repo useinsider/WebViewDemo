@@ -2,10 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single HTML Build</title>
 </head>
 <body>
-<h1>Hello</h1>
-<script type="module" src="/src/main.ts"></script>
+    <!-- Section 1: Logo -->
+    <section class="section-logo">
+        <img src="/src/insider.svg" alt="Insider Logo" class="logo">
+    </section>
+
+    <!-- Section 2: Description -->
+    <section class="section-description">
+        <h2 class="section-header">Insider WebView Demo</h2>
+        <p class="description">This demo contains simple methods that you can use with the Insider WebView SDK.</p>
+    </section>
+
+    <!-- Section 3: User Attributes -->
+    <section class="section-buttons">
+        <h2 class="section-header">User Attributes</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleSetAttributes()">Set Attributes</button>
+        </div>
+    </section>
+
+    <!-- Section 3: User Identifiers -->
+    <section class="section-buttons">
+        <h2 class="section-header">User Identifiers</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleLogin()">Login</button>
+            <button class="action-button" onclick="handleLogout()">Logout</button>
+        </div>
+    </section>
+
+    <!-- Section 4: Event -->
+    <section class="section-buttons">
+        <h2 class="section-header">Event</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleTriggerEvents()">Trigger Events</button>
+        </div>
+    </section>
+
+    <!-- Section 5: Product -->
+    <section class="section-buttons">
+        <h2 class="section-header">Product</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleCreateProduct()">Create Product</button>
+        </div>
+    </section>
+
+    <!-- Section 6: Purchase -->
+    <section class="section-buttons">
+        <h2 class="section-header">Purchase</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleAddItemToCart()">Add Item To Cart</button>
+            <button class="action-button" onclick="handleRemoveItemFromCart()">Remove Item From Cart</button>
+            <button class="action-button" onclick="handleClearCart()">Clear Cart</button>
+            <button class="action-button" onclick="handlePurchaseItem()">Purchase Item</button>
+        </div>
+    </section>
+
+    <!-- Section 7: Smart Recommender -->
+    <section class="section-buttons">
+        <h2 class="section-header">Smart Recommender</h2>
+        <div class="button-container">
+            <button class="action-button disabled" onclick="handleGetSmartRecommenderData()">Get Smart Recommender Data</button>
+        </div>
+    </section>
+
+    <!-- Section 8: Social Proof -->
+    <section class="section-buttons">
+        <h2 class="section-header">Social Proof</h2>
+        <div class="button-container">
+            <button class="action-button disabled" onclick="handleTriggerSocialProof()">Trigger Social Proof</button>
+        </div>
+    </section>
+
+    <!-- Section 9: Page Visit -->
+    <section class="section-buttons">
+        <h2 class="section-header">Page Visit Methods</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleHomePageVisit()">Home Page</button>
+            <button class="action-button" onclick="handleProductPageVisit()">Product Page</button>
+            <button class="action-button" onclick="handleCartPageVisit()">Cart Page</button>
+            <button class="action-button" onclick="handleCategoryPageVisit()">Category Page</button>
+        </div>
+    </section>
+
+    <!-- Section 10: GDPR -->
+    <section class="section-buttons">
+        <h2 class="section-header">GDPR</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleGDPRTrue()">GDPR True</button>
+            <button class="action-button" onclick="handleGDPRFalse()">GDPR False</button>
+        </div>
+    </section>
+
+    <!-- Section 11: Mobile Access -->
+    <section class="section-buttons">
+        <h2 class="section-header">Mobile Access</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleMobileAccessTrue()">Mobile Access True</button>
+            <button class="action-button" onclick="handleMobileAccessFalse()">Mobile Access False</button>
+        </div>
+    </section>
+
+    <!-- Section 12: Message Center -->
+    <section class="section-buttons">
+        <h2 class="section-header">Message Center</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleGetMessageCenterData()">Get Message Center Data</button>
+        </div>
+    </section>
+
+    <!-- Section 13: Content Optimizer -->
+    <section class="section-buttons">
+        <h2 class="section-header">Content Optimizer</h2>
+        <div class="button-container">
+            <button class="action-button disabled" onclick="handleGetContentOptimizerVariable()">Get Content Optimizer Variable</button>
+        </div>
+    </section>
+
+    <!-- Section 14: Block In App -->
+    <section class="section-buttons">
+        <h2 class="section-header">Block In App</h2>
+        <div class="button-container">
+            <button class="action-button" onclick="handleDisableInAppMessages()">Disable In-App Messages</button>
+            <button class="action-button" onclick="handleEnableInAppMessages()">Enable In-App Messages</button>
+        </div>
+    </section>
+
+    <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

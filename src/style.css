@@ -1,5 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: system-ui, sans-serif;
-    background: #111;
+    background: white;
+    color: black;
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Section 1: Logo */
+.section-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+/* Section 2: Description */
+.section-description {
+    text-align: left;
+}
+
+.description {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: #333;
+}
+
+/* Section 3 & 4: Button Sections */
+.section-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Make single buttons take full width */
+.button-container > .action-button:only-child {
+    grid-column: 1 / -1;
+}
+
+.action-button {
+    min-height: 40px;
+    padding: 0.2rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 600;
+    background: black;
     color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.action-button:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+.action-button.disabled {
+    background: #9CA3AF;
+    color: #E5E7EB;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.action-button.disabled:hover {
+    background: #9CA3AF;
+    transform: none;
+}
+
+/* Prevent text overflow on small screens */
+* {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    body {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        max-width: 250px;
+    }
+
+    .button-container {
+        gap: 1.5rem;
+    }
+
+    .action-button {
+        min-height: 60px;
+    }
 }
