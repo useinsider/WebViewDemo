@@ -1,0 +1,28 @@
+# Xcode
+build/
+DerivedData/
+**/*.xcuserstate
+**/xcuserdata/
+**/*.pbxuser
+**/*.mode1v3
+**/*.mode2v3
+**/*.perspectivev3
+**/*.moved-aside
+**/*.hmap
+**/*.ipa
+**/*.dSYM.zip
+**/*.dSYM
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Swift Package Manager
+**/.swiftpm/
+**/.build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
