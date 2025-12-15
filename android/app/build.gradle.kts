@@ -47,3 +47,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+apply(from = "build-webpage.gradle.kts")
