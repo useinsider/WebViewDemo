@@ -50,6 +50,15 @@ dependencies {
     implementation(libs.androidx.webkit)
     implementation(libs.insider)
     implementation(libs.insider.webView)
+
+    implementation(libs.androidx.security.crypto)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.process)
+    implementation(libs.androidx.work.runtime)
+
+    implementation(libs.firebase.messaging)
+    implementation(libs.play.services.location)
+    implementation(libs.play.review)
 }
 
 apply(from = "build-webpage.gradle.kts")
