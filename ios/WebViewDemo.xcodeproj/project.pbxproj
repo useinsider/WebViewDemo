@@ -197,6 +197,7 @@
 			buildPhases = (
 				B6290FA62EEFFFAF001E7897 /* Sources */,
 				B6290FA72EEFFFAF001E7897 /* Frameworks */,
+				B629111A2EF014C6001E7897 /* Build Web Page */,
 				B6290FA82EEFFFAF001E7897 /* Resources */,
 				B62910F92EF00B98001E7897 /* Embed Foundation Extensions */,
 			);
@@ -334,6 +335,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B629111A2EF014C6001E7897 /* Build Web Page */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Web Page";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\n# Common places npm/node are found (brew, macports, volta, asdf)\nexport PATH=\"/opt/homebrew/bin:/usr/local/bin:/opt/local/bin:$HOME/.volta/bin:$HOME/.asdf/shims:$PATH\"\n\n# Optional nvm support (only if installed)\nexport NVM_DIR=\"${NVM_DIR:-$HOME/.nvm}\"\nif [ -s \"$NVM_DIR/nvm.sh\" ]; then\n  . \"$NVM_DIR/nvm.sh\"\n\n  # Prefer project version if .nvmrc exists, otherwise use default (don’t fail the build if neither works)\n  if [ -f \"$SRCROOT/.nvmrc\" ]; then\n    nvm use --silent >/dev/null 2>&1 || nvm install --silent >/dev/null 2>&1 || true\n  else\n    nvm use --silent default >/dev/null 2>&1 || true\n  fi\nfi\n\n# Check that Node.js is installed on this device.\ncommand -v npm >/dev/null 2>&1 || { \n    echo \"error: Node was not found. Install Node.js (https://nodejs.org/) to continue.\"\n    exit 1;\n}\n\nREPO_ROOT=\"$(cd \"$SRCROOT/..\" && pwd)\"\n\n# Check if the package.json is cloned\nif [ ! -f \"$REPO_ROOT/package.json\" ]; then\n    echo \"error: Missing \\\"package.json\\\". Make sure the repo is cloned correctly.\"\n    exit 1\nfi\n\n# Build the JavaScript project\ncd \"$REPO_ROOT\"\nnpm install\nnpm run build\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6290FA62EEFFFAF001E7897 /* Sources */ = {
