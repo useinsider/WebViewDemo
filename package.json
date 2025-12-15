@@ -1,0 +1,24 @@
+{
+  "name": "webviewdemo",
+  "version": "1.0.0",
+  "description": "A demo project demonstrating how to use the Insider Mobile SDK in an embedded WebView.",
+  "keywords": [
+    "insider",
+    "sdk",
+    "webview",
+    "ios",
+    "android",
+    "mobile"
+  ],
+  "license": "Apache-2.0",
+  "author": "Insider",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7",
+    "vite-plugin-singlefile": "^2.3.0"
+  }
+}
