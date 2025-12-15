@@ -14,6 +14,8 @@
 		B6290FE12EF00902001E7897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6290FD62EF00902001E7897 /* LaunchScreen.storyboard */; };
 		B6290FE22EF00902001E7897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6290FD82EF00902001E7897 /* Main.storyboard */; };
 		B6290FE42EF0090A001E7897 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B6290FE32EF0090A001E7897 /* index.html */; };
+		B6290FE72EF0097B001E7897 /* InsiderMobile in Frameworks */ = {isa = PBXBuildFile; productRef = B6290FE62EF0097B001E7897 /* InsiderMobile */; };
+		B6290FE92EF0097B001E7897 /* InsiderWebView in Frameworks */ = {isa = PBXBuildFile; productRef = B6290FE82EF0097B001E7897 /* InsiderWebView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6290FE72EF0097B001E7897 /* InsiderMobile in Frameworks */,
+				B6290FE92EF0097B001E7897 /* InsiderWebView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +91,8 @@
 			);
 			name = WebViewDemo;
 			packageProductDependencies = (
+				B6290FE62EF0097B001E7897 /* InsiderMobile */,
+				B6290FE82EF0097B001E7897 /* InsiderWebView */,
 			);
 			productName = WebViewDemo;
 			productReference = B6290FAA2EEFFFAF001E7897 /* WebViewDemo.app */;
@@ -116,6 +122,9 @@
 			);
 			mainGroup = B6290FA12EEFFFAF001E7897;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B6290FE52EF0097B001E7897 /* XCRemoteSwiftPackageReference "Insider-iOS-SDK" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B6290FAB2EEFFFAF001E7897 /* Products */;
 			projectDirPath = "";
@@ -384,6 +393,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6290FE52EF0097B001E7897 /* XCRemoteSwiftPackageReference "Insider-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/useinsider/Insider-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6290FE62EF0097B001E7897 /* InsiderMobile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6290FE52EF0097B001E7897 /* XCRemoteSwiftPackageReference "Insider-iOS-SDK" */;
+			productName = InsiderMobile;
+		};
+		B6290FE82EF0097B001E7897 /* InsiderWebView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6290FE52EF0097B001E7897 /* XCRemoteSwiftPackageReference "Insider-iOS-SDK" */;
+			productName = InsiderWebView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6290FA22EEFFFAF001E7897 /* Project object */;
 }
