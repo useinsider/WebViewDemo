@@ -33,8 +33,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <!-- FIXME-INSIDER: Please edit this part according to your partner names. -->
                 <data android:scheme="insideryour_partner_name" />
+                <!-- FIXME-INSIDER: Please edit this part according to your partner name. -->
             </intent-filter>
         </activity>
     </application>

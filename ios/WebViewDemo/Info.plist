@@ -12,6 +12,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>insideryour_partner_name</string>
+				<!-- FIXME-INSIDER: Please edit this part according to your partner name. -->
 			</array>
 		</dict>
 	</array>
