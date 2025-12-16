@@ -1,7 +1,7 @@
 # Insider WebView Demo
 
 <p align="center">
-  <img src="assets/insider-logo-read-me.jpg" alt="Insider Logo" />
+  <img src="assets/insider-logo-readme.jpg" alt="Insider Logo" />
 </p>
 
 ## 📌 Description
