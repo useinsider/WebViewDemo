@@ -1,5 +1,15 @@
 import './style.css';
 
+// Start geofence tracking on app startup
+(async () => {
+    try {
+        await window.insider.startTrackingGeofence();
+        console.log("[INSIDER][startTrackingGeofence]: Geofence tracking started on app startup.");
+    } catch (error) {
+        console.error("[INSIDER][startTrackingGeofence]: Failed to start geofence tracking:", error);
+    }
+})();
+
 window.handleSetAttributes = async function () {
     const currentUser = window.insider.getCurrentUser();
 
