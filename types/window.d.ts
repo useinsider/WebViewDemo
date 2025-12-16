@@ -4,6 +4,7 @@ declare global {
     interface Window {
         handleSetAttributes: () => Promise<void>;
 
+        handleSignUp: () => Promise<void>;
         handleLogin: () => Promise<void>;
         handleLogout: () => Promise<void>;
 

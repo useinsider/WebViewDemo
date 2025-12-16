@@ -35,6 +35,12 @@ window.handleSetAttributes = async function () {
 }
 
 
+window.handleSignUp = async function () {
+    await window.insider.signUpConfirmation();
+
+    console.log("[INSIDER][signUpConfirmation]: Method is triggered.");
+}
+
 window.handleLogin = async function () {
     const identifiers = window.insider.createIdentifiers()
     identifiers.addEmail("mobile.test@useinsider.com");
