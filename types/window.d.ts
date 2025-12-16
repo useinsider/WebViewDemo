@@ -17,9 +17,10 @@ declare global {
         handleClearCart: () => Promise<void>;
         handlePurchaseItem: () => Promise<void>;
 
-        handleGetSmartRecommenderData: () => Promise<void>;
-
-        handleTriggerSocialProof: () => Promise<void>;
+        handleAddItemToWishlist: () => Promise<void>;
+        handleRemoveItemFromWishlist: () => Promise<void>;
+        handleVisitWishlist: () => Promise<void>;
+        handleClearWishlist: () => Promise<void>;
 
         handleHomePageVisit: () => Promise<void>;
         handleProductPageVisit: () => Promise<void>;
@@ -33,8 +34,6 @@ declare global {
         handleMobileAccessFalse: () => Promise<void>;
 
         handleGetMessageCenterData: () => Promise<void>;
-
-        handleGetContentOptimizerVariable: () => Promise<void>;
 
         handleDisableInAppMessages: () => Promise<void>;
         handleEnableInAppMessages: () => Promise<void>;

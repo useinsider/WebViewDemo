@@ -80,7 +80,9 @@ window.handleTriggerEvents = async function () {
         .addBooleanParameter("bool_parameter", true)
         .addDateParameter("date_parameter", new Date());
 
-    insiderExampleEvent.addStringArrayParameter("array_parameter", ["value1", "value2", "value3"]);
+    insiderExampleEvent
+        .addStringArrayParameter("array_parameter", ["value1", "value2", "value3"])
+        .addNumericArrayParameter("array_parameter", [100, 3.14, 2]);
 
     // Do not forget to call build method once you are done with parameters.
     // Otherwise, your event will be ignored.
@@ -168,15 +170,36 @@ window.handlePurchaseItem = async function () {
 }
 
 
-window.handleGetSmartRecommenderData = async function () {
-    // TODO: Not Supported for WebView SDK.
-    console.log("[INSIDER]: This method is not supported for WebView SDK.");
+window.handleAddItemToWishlist = async function () {
+    const insiderExampleProduct = await window.handleCreateProduct()
+    await window.insider.itemAddedToWishlist(insiderExampleProduct);
+
+    console.log("[INSIDER][itemAddedToWishlist]: Method is triggered.");
+    console.log("[INSIDER][itemAddedToWishlist]: ", "product: ", insiderExampleProduct);
 }
 
+window.handleRemoveItemFromWishlist = async function () {
+    const productId = "productId";
+    await window.insider.itemRemovedFromWishlist(productId);
 
-window.handleTriggerSocialProof = async function () {
-    // TODO: Not Supported for WebView SDK.
-    console.log("[INSIDER]: This method is not supported for WebView SDK.");
+    console.log("[INSIDER][itemRemovedFromWishlist]: Method is triggered.");
+    console.log("[INSIDER][itemRemovedFromWishlist]: ", "productId: ", productId);
+}
+
+window.handleVisitWishlist = async function () {
+    const insiderExampleProducts = [
+        await window.handleCreateProduct(),
+        await window.handleCreateProduct(),
+    ];
+    await window.insider.visitWishlist(insiderExampleProducts)
+
+    console.log("[INSIDER][visitWishlist]: Method is triggered.");
+}
+
+window.handleClearWishlist = async function () {
+    await window.insider.wishlistCleared();
+
+    console.log("[INSIDER][wishlistCleared]: Method is triggered.");
 }
 
 
@@ -250,12 +273,6 @@ window.handleGetMessageCenterData = async function () {
     } catch (error) {
         console.log("[INSIDER][getMessageCenterData]: ", "error: ", error);
     }
-}
-
-
-window.handleGetContentOptimizerVariable = async function () {
-    // TODO: Not Supported for WebView SDK.
-    console.log("[INSIDER]: This method is not supported for WebView SDK.");
 }
 
 
