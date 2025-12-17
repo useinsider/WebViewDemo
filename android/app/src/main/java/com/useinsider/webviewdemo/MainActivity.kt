@@ -6,7 +6,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.useinsider.insider.Insider
 import com.useinsider.insiderwebview.InsiderWebView
 
 class MainActivity : AppCompatActivity() {
@@ -23,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         InsiderWebView.setupWebViewSDK(webView)
-
-        webView.settings.javaScriptEnabled = true
         webView.loadUrl("file:///android_asset/index.html")
     }
 }

@@ -19,6 +19,7 @@ workRuntime = "2.9.1"
 firebaseMessaging = "24.0.0"
 playServicesLocation = "21.3.0"
 playReview = "2.0.1"
+googleServices = "4.4.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,4 +44,5 @@ play-review = { group = "com.google.android.play", name = "review", version.ref 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 
